@@ -1,5 +1,5 @@
-.container {
-    background-color: #222222;
+.App {
+    background-color: rgba(0, 0, 0, 0.09);
 }
 
 #loader-wrapper {
@@ -99,7 +99,7 @@
     top: 0;
     width: 51%;
     height: 100%;
-    background: #222;
+    background: #fafafa;
     z-index: 1000;
 }
 

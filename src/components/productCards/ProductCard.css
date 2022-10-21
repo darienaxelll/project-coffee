@@ -1,12 +1,12 @@
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.product-preview {
+    width: 50em;
+    padding: 10px;
+    border-bottom: 1px solid #fafafa;
+    margin: 10px;
 }
 
-.product-preview {
-    padding: 10px 16px;
-    border-bottom: 1px solid #fafafa;
-    margin-bottom: 10px;
+.links {
+    text-decoration: none;
+    color: black;
 }
 

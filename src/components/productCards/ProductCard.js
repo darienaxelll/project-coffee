@@ -6,17 +6,26 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import {AddShoppingCart} from "@mui/icons-material";
 import "./ProductCard.css";
+import {Link} from "react-router-dom";
+import "./ProductCard.css"
 
 const ProductCard = ({products}) => {
 
     return(
-        <div className="products-list">
+        <div className="products-list" style={
+                {marginTop: "10px",
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-around"
+                }}>
         {products.map((product) => (
             <Card className="product-preview" sx={{ maxWidth: 345 }} key={product.id}>
+                <Link className="links" to={`/products/${product.id}`}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
                         height="160"
+                        width="200"
                         image={product.imageURL}
                         alt="green iguana"
                         style={{borderRadius: "5px"}}
@@ -30,6 +39,7 @@ const ProductCard = ({products}) => {
                         </Typography>
                     </CardContent>
                 </CardActionArea>
+                </Link>
                 <CardActions>
                     <Button size="small" color="primary">
                         Add to cart <AddShoppingCart/>
